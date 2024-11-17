@@ -2,19 +2,38 @@
 
     class Carro{
 
+        protected $nome;
         protected $aceleracao;
         protected $freio;
         protected $velocidade;
 
 
 
+        public function freiar($dificuldadeFreio){
+                if($this->freio >= $dificuldadeFreio){
+                        return true;
+                        }
+                        else{
+                        return false;
+                        }         
+        }
 
-
-
-
+        public function getNome()
+        {
+                return $this->nome;
+        }
 
         /**
-         * Get the value of aceleracao
+         * Set the value of nome
+         */
+        public function setNome($nome): self
+        {
+                $this->nome = $nome;
+
+                return $this;
+        }
+        /**
+         * Get the value of nome
          */
         public function getAceleracao()
         {

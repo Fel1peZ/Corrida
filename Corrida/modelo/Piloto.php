@@ -21,6 +21,17 @@
 
         }
 
+        public function getCarro()
+        {
+                return $this->carro;
+        }
+
+        public function setCarro($carro): self
+        {
+                $this->carro = $carro;
+
+                return $this;     
+        }
         /**
          * Get the value of nome
          */

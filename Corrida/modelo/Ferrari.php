@@ -1,16 +1,30 @@
 <?php
 
+require_once("Carro.php");
+class Ferrari extends Carro{
 
-class Ferrari{
     private $desvio;
 
 
 
-    public function desviar(){
-
-        
+    public function __construct()
+    {
+        $this->nome = "Ferrari";
+        $this->desvio = 5;
+        $this->aceleracao = 5;
+        $this->velocidade = 3;
+        $this->freio = 7;
     }
 
+
+    public function desviar($dificuldadeDesvio){
+          if($this->desvio >= $dificuldadeDesvio){
+                return true;
+            }
+            else{
+                return false;
+            }
+    }
 
 
 
